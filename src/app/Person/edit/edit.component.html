@@ -1,0 +1,28 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>New Booking</h3>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="onEdit()">
+        <div class="form-group">
+          <label for="hotelName">HotelName: </label>
+          <input type="text" name="hotelName" id="hotelName" [(ngModel)]="hotelBook.hotelName"  class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpId" class="text-muted">Help text</small>
+        </div>
+        <div class="form-group">
+          <label for="pricePerNight">Hotelprice: </label>
+          <input type="text" name="pricePerNight" id="pricePerNight" [(ngModel)]="hotelBook.pricePerNight"  class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helprice" class="text-muted">Help text</small>
+        </div>
+        <div class="form-group">
+          <label for="nofNights">Number night: </label>
+          <input type="text" name="nofNights" id="nofNights" [(ngModel)]="hotelBook.nofNights"  class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpno" class="text-muted">Help text</small>
+        </div>
+        <button type="submit" class="btn btn-danger">Create</button>
+      </form>
+    </div>
+  </div>
+</div>
+

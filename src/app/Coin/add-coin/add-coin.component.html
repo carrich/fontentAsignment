@@ -1,0 +1,48 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>New coin</h3>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()">
+        <label for="maketId">Select list Maket:</label>
+        <select name="maketId" id="maketId" [(ngModel)]="coin.marketId" class="form-control" >
+          <option *ngFor="let maket of makets">{{maket.maketId}}</option>
+
+        </select>
+        <div class="form-group">
+          <label for="hotelName">Name: </label>
+          <input type="text" name="hotelName" id="hotelName" [(ngModel)]="coin.name"  class="form-control" placeholder="" aria-describedby="helpId">
+
+        </div>
+        <div class="form-group">
+          <label for="pricePerNight">Description: </label>
+          <input type="text" name="pricePerNight" id="pricePerNight" [(ngModel)]="coin.description"  class="form-control" placeholder="" aria-describedby="helpId">
+
+        </div>
+        <div class="form-group">
+          <label for="baseAsset">baseAsset: </label>
+          <input type="text" name="baseAsset" id="baseAsset" [(ngModel)]="coin.baseAsset"  class="form-control" placeholder="" aria-describedby="helpId">
+
+        </div>
+        <div class="form-group">
+          <label for="quoteAsset">quoteAsset: </label>
+          <input type="text" name="quoteAsset" id="quoteAsset" [(ngModel)]="coin.quoteAsset"  class="form-control" placeholder="" aria-describedby="helpId">
+
+        </div>
+        <div class="form-group">
+          <label for="lastPrice">lastPrice: </label>
+          <input type="text" name="lastPrice" id="lastPrice" [(ngModel)]="coin.lastPrice"  class="form-control" placeholder="" aria-describedby="helpId">
+
+        </div>
+        <div class="form-group">
+          <label for="volumn24h">volumn24h: </label>
+          <input type="text" name="volumn24h" id="volumn24h" [(ngModel)]="coin.volumn24h"  class="form-control" placeholder="" aria-describedby="helpId">
+
+        </div>
+
+        <button type="submit" class="btn btn-danger">Create</button>
+      </form>
+    </div>
+  </div>
+</div>

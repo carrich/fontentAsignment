@@ -1,0 +1,24 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Tạo sàn mới</h3>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <label for="hotelName">Name: </label>
+          <input type="text" name="hotelName" id="hotelName" [(ngModel)]="hotelBook.name"  class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpId" class="text-muted">Help text</small>
+        </div>
+        <div class="form-group">
+          <label for="pricePerNight">Description: </label>
+          <input type="text" name="pricePerNight" id="pricePerNight" [(ngModel)]="hotelBook.description"  class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helprice" class="text-muted">Help text</small>
+        </div>
+
+        <button type="submit" class="btn btn-danger">Create</button>
+      </form>
+    </div>
+  </div>
+</div>
